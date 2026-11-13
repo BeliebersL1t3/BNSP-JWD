@@ -152,20 +152,28 @@ try {
                                     </td>
                                     <td><?= htmlspecialchars($p['no_hp']); ?></td>
                                     <td class="text-center">
-                                        <!-- detail -->
-                                        <a href="detail.php?id=<?= $p['id']; ?>" class="btn btn-sm btn-info text-white me-1" title="Lihat Detail">
-                                            Detail
+                                        <!-- Tombol Detail (SVG Mata) -->
+                                        <a href="detail.php?id=<?= $p['id']; ?>" class="btn btn-sm btn-info text-white me-1" title="Lihat Detail Pegawai">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="align-middle">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
                                         </a>
-                                        <!-- Edit -->
-                                        <a href="edit.php?id=<?= $p['id']; ?>" class="btn btn-sm btn-warning text-dark me-1" title="Ubah Data">
-                                            Edit
+                                        <!-- Tombol Edit (SVG Pensil) -->
+                                        <a href="edit.php?id=<?= $p['id']; ?>" class="btn btn-sm btn-warning text-dark me-1" title="Ubah Data Pegawai">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="align-middle">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                            </svg>
                                         </a>
-                                        <!-- hapus -->
+                                        <!-- Tombol Hapus (SVG Tempat Sampah) -->
                                         <button type="button" 
                                                 class="btn btn-sm btn-danger" 
-                                                title="Hapus Data"
+                                                title="Hapus Data Pegawai"
                                                 onclick="konfirmasiHapus('<?= htmlspecialchars(addslashes($p['nama_lengkap'])); ?>', '../process/aksi_hapus.php?id=<?= $p['id']; ?>')">
-                                            Hapus
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="align-middle">
+                                                <polyline points="3 6 5 6 21 6"></polyline>
+                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                            </svg>
                                         </button>
                                     </td>
                                 </tr>
