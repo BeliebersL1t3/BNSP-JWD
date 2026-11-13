@@ -26,10 +26,10 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
--- akun admin
+-- akun admin (Password: admin123)
 INSERT INTO `users` (`username`, `password`, `nama_lengkap`) VALUES
-('admin', '$2y$10$tM2a6Y0f9q9P1oXkR1Hl5eZ0sT9s0uD1mU8qM4xQ7.7b7Bq7gqQy.', 'Administrator BNSP')
-ON DUPLICATE KEY UPDATE `username`=`username`;
+('admin', '$2y$10$ayTpt8vR7uQ.h9zqyCpwguJNDtJwvZfdamawmAllsO62J2h4rs4KK', 'Administrator BNSP')
+ON DUPLICATE KEY UPDATE `password`=VALUES(`password`);
 
 -- data dummy user
 INSERT INTO `pegawai` (`nip`, `nama_lengkap`, `email`, `no_hp`, `jenis_kelamin`, `jabatan`, `alamat`) VALUES
