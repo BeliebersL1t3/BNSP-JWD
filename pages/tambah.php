@@ -94,6 +94,7 @@ if (isset($_GET['error'])) {
                     <div class="col-md-6">
                         <label for="nip" class="form-label fw-semibold small">Nomor Induk Pegawai (NIP) *</label>
                         <input type="text" name="nip" id="nip" class="form-control" placeholder="Contoh: PEG-004" required>
+                        <small id="statusNip" class="d-block mt-1"></small>
                     </div>
 
                     <!-- Nama Lengkap -->
@@ -106,6 +107,7 @@ if (isset($_GET['error'])) {
                     <div class="col-md-6">
                         <label for="email" class="form-label fw-semibold small">Alamat Email *</label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="nama@perusahaan.com" required>
+                        <small id="statusEmail" class="d-block mt-1"></small>
                     </div>
 
                     <!-- Nomor HP -->
